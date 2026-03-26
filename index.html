@@ -36,10 +36,35 @@
   <section class="section" id="analysis">
     <div class="container">
       <div class="section-label">Part 1</div>
-      <h2 class="section-title">Campaign Performance Rankings</h2>
-      <p class="section-desc">Campaigns ranked by pipeline ROAS with tier classification. Tier 1 campaigns should be scaled, Tier 2 optimized, and Tier 3 contained or reduced.</p>
+      <h2 class="section-title">Campaign Performance Analysis</h2>
+      <p class="section-desc">A data-driven analysis of 12 paid campaigns across Google SEM, LinkedIn, and Meta &mdash; ranked, tiered, and paired with actionable next steps.</p>
 
-      <!-- Performance Table -->
+      <!-- 1. Key Insights -->
+      <div class="key-insights-block">
+        <h3 class="subsection-title"><span class="subsection-num">1.</span> Key Insights</h3>
+        <div class="key-tiles-grid">
+          <div class="key-tile fade-in">
+            <h4>Enterprise security is the winning ICP</h4>
+            <p>Top campaigns all target CISOs and security leaders. The further campaigns drift from this ICP, the worse they perform. The biggest opportunity is scaling campaigns that reach security decision-makers.</p>
+          </div>
+          <div class="key-tile fade-in">
+            <h4>All campaigns drive strong pipeline ROAS</h4>
+            <p>Even bottom performers drive 8&ndash;19x pipe ROAS. But efficiency matters: every dollar in Tier 3 could generate ~7x more pipeline if reallocated to Tier 1 campaigns.</p>
+          </div>
+          <div class="key-tile fade-in">
+            <h4>Meta is underperforming</h4>
+            <p>Meta drives 3&ndash;4x lower pipeline efficiency than Google or LinkedIn. Broad, non-ICP audience targeting is the culprit. Majority of Meta spend should be reallocated or repurposed for retargeting.</p>
+          </div>
+          <div class="key-tile fade-in">
+            <h4>Google is highly efficient</h4>
+            <p>The strongest channel at 87x pipe ROAS and potential for untapped demand. Broad campaigns underperform vs. high-intent, suggesting opportunity to optimize toward bottom-funnel keywords.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Campaign Ranking -->
+      <h3 class="subsection-title">Campaign Ranking</h3>
+      <p class="subsection-desc">Campaigns ranked by pipeline ROAS with tier classification. Tier 1 campaigns should be scaled, Tier 2 optimized, and Tier 3 contained or reduced.</p>
       <div class="table-wrapper">
         <table class="perf-table">
           <colgroup>
@@ -254,53 +279,122 @@
         </table>
       </div>
 
-      <!-- Key Insights -->
-      <div class="key-insights-block">
-        <h3 class="key-insights-title">Key Insights</h3>
-        <div class="key-tiles-grid">
-          <div class="key-tile fade-in">
-            <h4>Security audience + high intent wins</h4>
-            <p>Top campaigns target CISOs and enterprise security leaders with high-intent, security-positioned messaging. The biggest opportunity is scaling and optimizing campaigns that reach this ICP.</p>
-          </div>
-          <div class="key-tile fade-in">
-            <h4>All campaigns drive strong pipeline ROAS</h4>
-            <p>Even bottom performers drive 8&ndash;19x pipe ROAS. But efficiency matters: every dollar in Tier 3 could generate ~7x more pipeline if reallocated to Tier 1 campaigns.</p>
-          </div>
-          <div class="key-tile fade-in">
-            <h4>Meta is underperforming</h4>
-            <p>Meta drives 3&ndash;4x lower pipeline efficiency than Google or LinkedIn. Broad, non-ICP audience targeting is the culprit &mdash; majority of Meta spend should be reallocated or repurposed for retargeting.</p>
-          </div>
-          <div class="key-tile fade-in">
-            <h4>Google is highly efficient</h4>
-            <p>The strongest channel at 87x blended pipe ROAS with significant untapped demand. Broad campaigns underperform vs. high-intent, suggesting opportunity to optimize toward bottom-funnel keywords.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Missing Data Callout -->
-      <div class="callout callout-warning">
-        <div class="callout-icon">&#9888;</div>
-        <div>
-          <strong>Missing Data</strong>
-          <p>Key data gaps exist: Demos Held, Opportunities, Customers, ARR, and ROAS (ARR) are not provided. These downstream metrics are critical for understanding true campaign value &mdash; pipeline ROAS is directionally useful for ranking but closed-won data is needed before making final budget decisions.</p>
-        </div>
-      </div>
-
       <!-- Ranking Criteria -->
-      <div class="ranking-criteria">
-        <h4>Ranking Criteria</h4>
-        <div class="criteria-grid">
-          <div class="criteria-item">
-            <span class="criteria-label">Primary</span>
-            <span class="criteria-value">ROAS (pipe) &mdash; leading business metric showing efficiency of each dollar spent</span>
+      <div class="ranking-criteria-v2">
+        <h4 class="subsection-title-sm">Ranking Criteria</h4>
+        <div class="criteria-cards">
+          <div class="criteria-card fade-in">
+            <span class="criteria-eyebrow">Primary</span>
+            <strong class="criteria-metric">ROAS (pipe)</strong>
+            <p>Leading business metric showing efficiency of each dollar spent</p>
           </div>
-          <div class="criteria-item">
-            <span class="criteria-label">Secondary</span>
-            <span class="criteria-value">Pipe $/demo request &mdash; average value of each demo, assesses lead quality</span>
+          <div class="criteria-card fade-in">
+            <span class="criteria-eyebrow">Secondary</span>
+            <strong class="criteria-metric">Pipe $/Demo</strong>
+            <p>Average pipeline value per demo request &mdash; assesses lead quality</p>
           </div>
-          <div class="criteria-item">
-            <span class="criteria-label">Tertiary</span>
-            <span class="criteria-value">CP Demo Request &amp; Demo Rate &mdash; efficiency metrics that explain performance</span>
+          <div class="criteria-card fade-in">
+            <span class="criteria-eyebrow">Tertiary</span>
+            <strong class="criteria-metric">CP Demo &amp; Demo Rate</strong>
+            <p>Cost efficiency metrics that explain what&rsquo;s driving performance</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Data Required -->
+      <div class="additional-data-section">
+        <h3 class="subsection-title">Additional Data Required</h3>
+        <p class="subsection-desc">Pipeline ROAS is directionally useful for ranking, but closed-won data is needed before making final budget decisions. Below is the full conversion funnel &mdash; green stages have data, red stages are gaps.</p>
+
+        <div class="funnel-container fade-in">
+          <!-- Funnel stages -->
+          <div class="funnel-track">
+            <div class="funnel-stage has-data" style="--stage-width: 100%;">
+              <div class="funnel-stage-inner">
+                <span class="funnel-count">~903K</span>
+                <span class="funnel-label">Impressions</span>
+              </div>
+              <span class="funnel-status status-have">Have</span>
+            </div>
+            <div class="funnel-connector">
+              <span class="funnel-rate has-rate">3.2% CTR</span>
+            </div>
+            <div class="funnel-stage has-data" style="--stage-width: 82%;">
+              <div class="funnel-stage-inner">
+                <span class="funnel-count">~29.3K</span>
+                <span class="funnel-label">Clicks</span>
+              </div>
+              <span class="funnel-status status-have">Have</span>
+            </div>
+            <div class="funnel-connector">
+              <span class="funnel-rate has-rate">0.8% Demo Rate</span>
+            </div>
+            <div class="funnel-stage has-data" style="--stage-width: 66%;">
+              <div class="funnel-stage-inner">
+                <span class="funnel-count">232</span>
+                <span class="funnel-label">Demo Requests</span>
+              </div>
+              <span class="funnel-status status-have">Have</span>
+            </div>
+            <div class="funnel-connector">
+              <span class="funnel-rate missing-rate">? Show Rate</span>
+            </div>
+            <div class="funnel-stage missing-data" style="--stage-width: 54%;">
+              <div class="funnel-stage-inner">
+                <span class="funnel-count">?</span>
+                <span class="funnel-label">Demos Held</span>
+              </div>
+              <span class="funnel-status status-missing">Missing</span>
+            </div>
+            <div class="funnel-connector">
+              <span class="funnel-rate missing-rate">? Opp Rate</span>
+            </div>
+            <div class="funnel-stage missing-data" style="--stage-width: 42%;">
+              <div class="funnel-stage-inner">
+                <span class="funnel-count">?</span>
+                <span class="funnel-label">Opportunities</span>
+              </div>
+              <span class="funnel-status status-missing">Missing</span>
+            </div>
+            <div class="funnel-connector">
+              <span class="funnel-rate missing-rate">? Close Rate</span>
+            </div>
+            <div class="funnel-stage missing-data" style="--stage-width: 30%;">
+              <div class="funnel-stage-inner">
+                <span class="funnel-count">?</span>
+                <span class="funnel-label">Customers</span>
+              </div>
+              <span class="funnel-status status-missing">Missing</span>
+            </div>
+          </div>
+
+          <!-- Side metrics -->
+          <div class="funnel-side-metrics">
+            <div class="side-metric has-data-metric">
+              <span class="side-metric-label">Pipeline</span>
+              <span class="side-metric-value">$5.83M</span>
+              <span class="funnel-status status-have">Have</span>
+            </div>
+            <div class="side-metric missing-data-metric">
+              <span class="side-metric-label">ARR</span>
+              <span class="side-metric-value">?</span>
+              <span class="funnel-status status-missing">Missing</span>
+            </div>
+            <div class="side-metric missing-data-metric">
+              <span class="side-metric-label">ROAS (ARR)</span>
+              <span class="side-metric-value">?</span>
+              <span class="funnel-status status-missing">Missing</span>
+            </div>
+            <div class="side-metric missing-data-metric">
+              <span class="side-metric-label">ACV</span>
+              <span class="side-metric-value">?</span>
+              <span class="funnel-status status-missing">Can calculate</span>
+            </div>
+            <div class="side-metric missing-data-metric">
+              <span class="side-metric-label">Segment Data</span>
+              <span class="side-metric-value">?</span>
+              <span class="funnel-status status-missing">Missing</span>
+            </div>
           </div>
         </div>
       </div>

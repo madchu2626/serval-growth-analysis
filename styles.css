@@ -329,23 +329,45 @@ body {
   color: var(--red);
 }
 
-/* ---- Key Insights Tiles ---- */
-.key-insights-block {
-  margin-top: 40px;
-  margin-bottom: 32px;
-}
-
-.key-insights-title {
+/* ---- Subsection Titles ---- */
+.subsection-title {
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-top: 48px;
+  margin-bottom: 12px;
+}
+
+.subsection-num {
+  color: var(--purple);
+  margin-right: 8px;
+}
+
+.subsection-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.subsection-title-sm {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+/* ---- Key Insights Tiles ---- */
+.key-insights-block {
+  margin-bottom: 8px;
 }
 
 .key-tiles-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  margin-top: 20px;
 }
 
 .key-tile {
@@ -373,6 +395,221 @@ body {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.7;
+}
+
+/* ---- Ranking Criteria v2 ---- */
+.ranking-criteria-v2 {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.criteria-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.criteria-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.criteria-card:hover {
+  border-color: var(--border-light);
+}
+
+.criteria-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.criteria-metric {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.criteria-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ---- Funnel Visualization ---- */
+.additional-data-section {
+  margin-bottom: 16px;
+}
+
+.funnel-container {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+
+.funnel-track {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.funnel-stage {
+  width: var(--stage-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  transition: transform 0.2s;
+}
+
+.funnel-stage.has-data {
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+.funnel-stage.missing-data {
+  background: rgba(248, 113, 113, 0.06);
+  border: 1px dashed rgba(248, 113, 113, 0.3);
+}
+
+.funnel-stage-inner {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.funnel-count {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.funnel-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.funnel-status {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.status-have {
+  background: rgba(52, 211, 153, 0.12);
+  color: var(--green);
+}
+
+.status-missing {
+  background: rgba(248, 113, 113, 0.12);
+  color: var(--red);
+}
+
+.funnel-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+  position: relative;
+}
+
+.funnel-connector::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border-light);
+}
+
+.funnel-rate {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 12px;
+  border-radius: 100px;
+  background: var(--bg-card);
+}
+
+.has-rate {
+  color: var(--green);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.missing-rate {
+  color: var(--red);
+  border: 1px dashed rgba(248, 113, 113, 0.25);
+}
+
+/* Side metrics */
+.funnel-side-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 24px;
+  border-left: 1px solid var(--border);
+}
+
+.side-metric {
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.has-data-metric {
+  background: rgba(52, 211, 153, 0.06);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.missing-data-metric {
+  background: rgba(248, 113, 113, 0.04);
+  border: 1px dashed rgba(248, 113, 113, 0.2);
+}
+
+.side-metric-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  min-width: 90px;
+}
+
+.side-metric-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+}
+
+.side-metric .funnel-status {
+  font-size: 10px;
 }
 
 /* ---- Callout ---- */
@@ -409,47 +646,7 @@ body {
   line-height: 1.6;
 }
 
-/* ---- Ranking Criteria ---- */
-.ranking-criteria {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-}
-
-.ranking-criteria h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: var(--text);
-}
-
-.criteria-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.criteria-item {
-  display: flex;
-  gap: 16px;
-  align-items: baseline;
-}
-
-.criteria-label {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--purple);
-  min-width: 80px;
-  flex-shrink: 0;
-}
-
-.criteria-value {
-  font-size: 14px;
-  color: var(--text-muted);
-}
+/* ---- Ranking Criteria (legacy, kept for reference) ---- */
 
 /* ---- Insight Cards ---- */
 .insights-grid {
@@ -857,7 +1054,7 @@ body {
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(n+10) {
   z-index: 5;
-  background: #0f0f0f;
+  background: #12101a;
 }
 
 .perf-table tbody td:nth-child(n+10) {
@@ -921,6 +1118,26 @@ body {
 
   .insights-grid {
     grid-template-columns: 1fr;
+  }
+
+  .key-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .criteria-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .funnel-container {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+
+  .funnel-side-metrics {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
   }
 
   .opt-summary {
