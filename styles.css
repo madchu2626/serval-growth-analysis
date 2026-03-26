@@ -116,7 +116,7 @@ body {
 
 /* ---- Hero ---- */
 .hero {
-  padding: 160px 0 80px;
+  padding: 140px 0 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -153,7 +153,7 @@ body {
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .gradient-text {
@@ -171,13 +171,6 @@ body {
   line-height: 1.7;
 }
 
-.hero-author {
-  margin-top: 16px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-  letter-spacing: 0.02em;
-}
 
 /* ---- Sections ---- */
 .section {
@@ -201,7 +194,7 @@ body {
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 700;
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .section-desc {
