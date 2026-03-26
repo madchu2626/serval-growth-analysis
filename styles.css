@@ -223,7 +223,8 @@ body {
 
 .perf-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 14px;
   white-space: nowrap;
 }
@@ -243,11 +244,14 @@ body {
 }
 
 .perf-table tbody tr {
-  border-bottom: 1px solid var(--border);
   transition: background 0.15s;
 }
 
-.perf-table tbody tr:last-child {
+.perf-table tbody td {
+  border-bottom: 1px solid var(--border);
+}
+
+.perf-table tbody tr:last-child td {
   border-bottom: none;
 }
 
@@ -323,6 +327,52 @@ body {
 .tier-badge-3 {
   background: var(--red-dim);
   color: var(--red);
+}
+
+/* ---- Key Insights Tiles ---- */
+.key-insights-block {
+  margin-top: 40px;
+  margin-bottom: 32px;
+}
+
+.key-insights-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.key-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.key-tile {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.key-tile:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+}
+
+.key-tile h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.key-tile p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 /* ---- Callout ---- */
@@ -723,7 +773,7 @@ body {
 /* ---- Split Table: Sticky Columns ---- */
 .perf-table {
   table-layout: fixed;
-  min-width: 1351px;
+  min-width: 1533px;
 }
 
 /* Section header row */
@@ -734,38 +784,43 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
+  background: #0f0f0f;
 }
 
 .section-label-key {
   background: #0f0f0f;
+  color: var(--text-muted);
   position: sticky;
   left: 0;
-  z-index: 5;
+  z-index: 6;
 }
 
 .section-label-data {
   background: #0f0f0f;
   color: var(--text-dim);
+  position: sticky;
+  left: 523px;
+  z-index: 6;
 }
 
 .section-label-calc {
-  background: rgba(124, 92, 252, 0.06);
+  background: #12101a;
   color: var(--purple);
   border-left: 2px solid rgba(124, 92, 252, 0.3);
   position: sticky;
   right: 0;
-  z-index: 5;
+  z-index: 6;
 }
 
 /* Frozen LEFT columns (Rank, Channel, Campaign, Audience) */
 .perf-table thead tr:not(.table-section-row) th:nth-child(-n+4),
 .perf-table tbody td:nth-child(-n+4) {
   position: sticky;
-  z-index: 2;
+  z-index: 3;
 }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(-n+4) {
-  z-index: 4;
+  z-index: 5;
   background: #0f0f0f;
 }
 
@@ -777,7 +832,7 @@ body {
   background: var(--bg-card-hover);
 }
 
-/* Left offsets (cumulative widths from colgroup) */
+/* Left offsets: 52 + 126 + 185 + 160 = 523px frozen left */
 .perf-table thead tr:not(.table-section-row) th:nth-child(1),
 .perf-table tbody td:nth-child(1) { left: 0; }
 
@@ -785,48 +840,48 @@ body {
 .perf-table tbody td:nth-child(2) { left: 52px; }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(3),
-.perf-table tbody td:nth-child(3) { left: 172px; }
+.perf-table tbody td:nth-child(3) { left: 178px; }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(4),
 .perf-table tbody td:nth-child(4) {
-  left: 352px;
-  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.4);
+  left: 363px;
+  box-shadow: 4px 0 16px rgba(0, 0, 0, 0.5);
 }
 
 /* Frozen RIGHT columns (CP Demo, Pipe $/Demo, ROAS, Tier) */
 .perf-table thead tr:not(.table-section-row) th:nth-child(n+10),
 .perf-table tbody td:nth-child(n+10) {
   position: sticky;
-  z-index: 2;
+  z-index: 3;
 }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(n+10) {
-  z-index: 4;
+  z-index: 5;
   background: #0f0f0f;
 }
 
 .perf-table tbody td:nth-child(n+10) {
-  background: rgba(124, 92, 252, 0.03);
+  background: #13111c;
 }
 
 .perf-table tbody tr:hover td:nth-child(n+10) {
-  background: rgba(124, 92, 252, 0.08);
+  background: #1a1726;
 }
 
-/* Right offsets (cumulative widths from right) */
+/* Right offsets: 145 + 85 + 105 + 95 = 430px frozen right */
 .perf-table thead tr:not(.table-section-row) th:nth-child(13),
 .perf-table tbody td:nth-child(13) { right: 0; }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(12),
-.perf-table tbody td:nth-child(12) { right: 140px; }
+.perf-table tbody td:nth-child(12) { right: 145px; }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(11),
-.perf-table tbody td:nth-child(11) { right: 220px; }
+.perf-table tbody td:nth-child(11) { right: 230px; }
 
 .perf-table thead tr:not(.table-section-row) th:nth-child(10),
 .perf-table tbody td:nth-child(10) {
-  right: 320px;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.4);
+  right: 335px;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.5);
   border-left: 2px solid rgba(124, 92, 252, 0.3);
 }
 
