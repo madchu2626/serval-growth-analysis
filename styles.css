@@ -339,7 +339,7 @@ body {
 .subsection-desc {
   font-size: 15px;
   color: var(--text-muted);
-  max-width: 720px;
+  max-width: 100%;
   margin-bottom: 24px;
   line-height: 1.7;
 }
