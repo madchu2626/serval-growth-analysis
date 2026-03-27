@@ -304,98 +304,137 @@
         <p class="subsection-desc">Pipeline ROAS is directionally useful for ranking, but actual ROAS and additional down-funnel data are required before making budget decisions. Segment data would also be important to understand which campaigns capture enterprise demand best. Below is the full conversion funnel &mdash; green stages have data, red stages are gaps.</p>
 
         <div class="funnel-container fade-in">
-          <!-- Funnel stages -->
-          <div class="funnel-track">
-            <div class="funnel-stage has-data" style="--stage-width: 100%;">
-              <div class="funnel-stage-inner">
-                <span class="funnel-count">855K</span>
-                <span class="funnel-label">Impressions</span>
+          <!-- Impressions -->
+          <div class="funnel-row">
+            <div class="funnel-stage-area">
+              <div class="funnel-stage has-data" style="--stage-width: 100%;">
+                <div class="funnel-stage-inner">
+                  <span class="funnel-count">855K</span>
+                  <span class="funnel-label">Impressions</span>
+                </div>
+                <span class="funnel-status status-have">Have</span>
               </div>
-              <span class="funnel-status status-have">Have</span>
             </div>
-            <div class="funnel-connector">
-              <span class="funnel-rate has-rate">3.4% CTR</span>
-            </div>
-            <div class="funnel-stage has-data" style="--stage-width: 82%;">
-              <div class="funnel-stage-inner">
-                <span class="funnel-count">29.4K</span>
-                <span class="funnel-label">Clicks</span>
+            <div class="funnel-metric-area"></div>
+          </div>
+
+          <div class="funnel-connector"><span class="funnel-rate has-rate">3.4% CTR</span></div>
+
+          <!-- Clicks -->
+          <div class="funnel-row">
+            <div class="funnel-stage-area">
+              <div class="funnel-stage has-data" style="--stage-width: 82%;">
+                <div class="funnel-stage-inner">
+                  <span class="funnel-count">29.4K</span>
+                  <span class="funnel-label">Clicks</span>
+                </div>
+                <span class="funnel-status status-have">Have</span>
               </div>
-              <span class="funnel-status status-have">Have</span>
             </div>
-            <div class="funnel-connector">
-              <span class="funnel-rate has-rate">0.8% Demo Rate</span>
-            </div>
-            <div class="funnel-stage has-data" style="--stage-width: 66%;">
-              <div class="funnel-stage-inner">
-                <span class="funnel-count">232</span>
-                <span class="funnel-label">Demo Requests</span>
+            <div class="funnel-metric-area"></div>
+          </div>
+
+          <div class="funnel-connector"><span class="funnel-rate has-rate">0.8% Demo Rate</span></div>
+
+          <!-- Demo Requests → Pipeline -->
+          <div class="funnel-row">
+            <div class="funnel-stage-area">
+              <div class="funnel-stage has-data" style="--stage-width: 66%;">
+                <div class="funnel-stage-inner">
+                  <span class="funnel-count">232</span>
+                  <span class="funnel-label">Demo Requests</span>
+                </div>
+                <span class="funnel-status status-have">Have</span>
               </div>
-              <span class="funnel-status status-have">Have</span>
             </div>
-            <div class="funnel-connector">
-              <span class="funnel-rate missing-rate">? Show Rate</span>
-            </div>
-            <div class="funnel-stage missing-data" style="--stage-width: 54%;">
-              <div class="funnel-stage-inner">
-                <span class="funnel-count">?</span>
-                <span class="funnel-label">Demos Held</span>
+            <div class="funnel-metric-area">
+              <div class="funnel-link-line"></div>
+              <div class="linked-metric has-data-metric">
+                <span class="linked-metric-label">Pipeline</span>
+                <span class="linked-metric-value">$5.83M</span>
+                <span class="funnel-status status-have">Have</span>
               </div>
-              <span class="funnel-status status-missing">Missing</span>
-            </div>
-            <div class="funnel-connector">
-              <span class="funnel-rate missing-rate">? Opp Rate</span>
-            </div>
-            <div class="funnel-stage missing-data" style="--stage-width: 42%;">
-              <div class="funnel-stage-inner">
-                <span class="funnel-count">?</span>
-                <span class="funnel-label">Opportunities</span>
-              </div>
-              <span class="funnel-status status-missing">Missing</span>
-            </div>
-            <div class="funnel-connector">
-              <span class="funnel-rate missing-rate">? Close Rate</span>
-            </div>
-            <div class="funnel-stage missing-data" style="--stage-width: 30%;">
-              <div class="funnel-stage-inner">
-                <span class="funnel-count">?</span>
-                <span class="funnel-label">Customers</span>
-              </div>
-              <span class="funnel-status status-missing">Missing</span>
             </div>
           </div>
 
-          <!-- Side metrics -->
-          <div class="funnel-side-metrics">
-            <div class="side-metric has-data-metric">
-              <span class="side-metric-label">Pipeline</span>
-              <span class="side-metric-value">$5.83M</span>
-              <span class="funnel-status status-have">Have</span>
+          <div class="funnel-connector"><span class="funnel-rate missing-rate">? Show Rate</span></div>
+
+          <!-- Demos Held -->
+          <div class="funnel-row">
+            <div class="funnel-stage-area">
+              <div class="funnel-stage missing-data" style="--stage-width: 54%;">
+                <div class="funnel-stage-inner">
+                  <span class="funnel-count">?</span>
+                  <span class="funnel-label">Demos Held</span>
+                </div>
+                <span class="funnel-status status-missing">Missing</span>
+              </div>
             </div>
-            <div class="side-metric missing-data-metric">
-              <span class="side-metric-label">ARR</span>
-              <span class="side-metric-value">?</span>
-              <span class="funnel-status status-missing">Missing</span>
+            <div class="funnel-metric-area"></div>
+          </div>
+
+          <div class="funnel-connector"><span class="funnel-rate missing-rate">? Opp Rate</span></div>
+
+          <!-- Opportunities → Avg Opp Value, Segment Data -->
+          <div class="funnel-row">
+            <div class="funnel-stage-area">
+              <div class="funnel-stage missing-data" style="--stage-width: 42%;">
+                <div class="funnel-stage-inner">
+                  <span class="funnel-count">?</span>
+                  <span class="funnel-label">Opportunities</span>
+                </div>
+                <span class="funnel-status status-missing">Missing</span>
+              </div>
             </div>
-            <div class="side-metric missing-data-metric">
-              <span class="side-metric-label">ROAS (ARR)</span>
-              <span class="side-metric-value">?</span>
-              <span class="funnel-status status-missing">Missing</span>
+            <div class="funnel-metric-area">
+              <div class="funnel-link-line"></div>
+              <div class="linked-metrics-stack">
+                <div class="linked-metric missing-data-metric">
+                  <span class="linked-metric-label">Avg Opp Value</span>
+                  <span class="linked-metric-value">?</span>
+                  <span class="funnel-status status-missing">Missing</span>
+                </div>
+                <div class="linked-metric missing-data-metric">
+                  <span class="linked-metric-label">Segment Data</span>
+                  <span class="linked-metric-value">?</span>
+                  <span class="funnel-status status-missing">Missing</span>
+                </div>
+              </div>
             </div>
-            <div class="side-metric missing-data-metric">
-              <span class="side-metric-label">ACV</span>
-              <span class="side-metric-value">?</span>
-              <span class="funnel-status status-missing">Missing</span>
+          </div>
+
+          <div class="funnel-connector"><span class="funnel-rate missing-rate">? Close Rate</span></div>
+
+          <!-- Customers → ARR, ACV, ROAS (ARR) -->
+          <div class="funnel-row">
+            <div class="funnel-stage-area">
+              <div class="funnel-stage missing-data" style="--stage-width: 30%;">
+                <div class="funnel-stage-inner">
+                  <span class="funnel-count">?</span>
+                  <span class="funnel-label">Customers</span>
+                </div>
+                <span class="funnel-status status-missing">Missing</span>
+              </div>
             </div>
-            <div class="side-metric missing-data-metric">
-              <span class="side-metric-label">Avg Opp Value</span>
-              <span class="side-metric-value">?</span>
-              <span class="funnel-status status-missing">Missing</span>
-            </div>
-            <div class="side-metric missing-data-metric">
-              <span class="side-metric-label">Segment Data</span>
-              <span class="side-metric-value">?</span>
-              <span class="funnel-status status-missing">Missing</span>
+            <div class="funnel-metric-area">
+              <div class="funnel-link-line"></div>
+              <div class="linked-metrics-stack">
+                <div class="linked-metric missing-data-metric">
+                  <span class="linked-metric-label">ARR</span>
+                  <span class="linked-metric-value">?</span>
+                  <span class="funnel-status status-missing">Missing</span>
+                </div>
+                <div class="linked-metric missing-data-metric">
+                  <span class="linked-metric-label">ACV</span>
+                  <span class="linked-metric-value">?</span>
+                  <span class="funnel-status status-missing">Missing</span>
+                </div>
+                <div class="linked-metric missing-data-metric">
+                  <span class="linked-metric-label">ROAS (ARR)</span>
+                  <span class="linked-metric-value">?</span>
+                  <span class="funnel-status status-missing">Missing</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

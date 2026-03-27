@@ -457,24 +457,34 @@ body {
 }
 
 .funnel-container {
-  display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 32px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 36px;
 }
 
-.funnel-track {
+.funnel-row {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  align-items: center;
+}
+
+.funnel-stage-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.funnel-metric-area {
+  width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 1px;
 }
 
 .funnel-stage {
   width: var(--stage-width);
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -539,13 +549,14 @@ body {
   align-items: center;
   justify-content: center;
   padding: 6px 0;
+  padding-right: 280px;
   position: relative;
 }
 
 .funnel-connector::before {
   content: '';
   position: absolute;
-  left: 50%;
+  left: calc((100% - 280px) / 2);
   top: 0;
   bottom: 0;
   width: 1px;
@@ -572,48 +583,51 @@ body {
   border: 1px dashed rgba(248, 113, 113, 0.25);
 }
 
-/* Side metrics */
-.funnel-side-metrics {
+/* Linked metrics (inline with funnel stages) */
+.funnel-link-line {
+  flex: 0 0 40px;
+  height: 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.linked-metrics-stack {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-left: 24px;
-  border-left: 1px solid var(--border);
+  gap: 6px;
 }
 
-.side-metric {
-  padding: 14px 16px;
-  border-radius: var(--radius-sm);
+.linked-metric {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
 }
 
-.has-data-metric {
+.linked-metric.has-data-metric {
   background: rgba(52, 211, 153, 0.06);
   border: 1px solid rgba(52, 211, 153, 0.2);
 }
 
-.missing-data-metric {
+.linked-metric.missing-data-metric {
   background: rgba(248, 113, 113, 0.04);
   border: 1px dashed rgba(248, 113, 113, 0.2);
 }
 
-.side-metric-label {
-  font-size: 13px;
+.linked-metric-label {
+  font-size: 12px;
   font-weight: 500;
   color: var(--text-muted);
-  min-width: 90px;
 }
 
-.side-metric-value {
-  font-size: 16px;
+.linked-metric-value {
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
-  flex: 1;
 }
 
-.side-metric .funnel-status {
+.linked-metric .funnel-status {
   font-size: 10px;
 }
 
@@ -1132,15 +1146,24 @@ body {
   }
 
   .funnel-container {
-    grid-template-columns: 1fr;
     padding: 24px;
   }
 
-  .funnel-side-metrics {
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid var(--border);
-    padding-top: 20px;
+  .funnel-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .funnel-metric-area {
+    width: 100%;
+  }
+
+  .funnel-connector {
+    padding-right: 0;
+  }
+
+  .funnel-connector::before {
+    left: 50%;
   }
 
   .opt-summary {
