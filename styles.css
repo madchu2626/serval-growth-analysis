@@ -914,12 +914,11 @@ body {
 }
 
 .sub-section h5 {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--text);
   margin-bottom: 8px;
-  padding-left: 12px;
-  border-left: 2px solid var(--purple);
+  letter-spacing: -0.01em;
 }
 
 /* ---- Experiment Meta ---- */
