@@ -172,14 +172,11 @@ body {
 }
 
 .hero-ai-note {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 6px 16px;
-  font-size: 12px;
-  color: var(--purple-light);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  border-radius: 20px;
-  letter-spacing: 0.02em;
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 16px auto 0;
+  line-height: 1.6;
 }
 
 
