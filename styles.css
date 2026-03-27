@@ -116,7 +116,7 @@ body {
 
 /* ---- Hero ---- */
 .hero {
-  padding: 140px 0 48px;
+  padding: 140px 0 40px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -168,7 +168,7 @@ body {
   color: var(--text-muted);
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 
@@ -200,8 +200,8 @@ body {
 .section-desc {
   font-size: 16px;
   color: var(--text-muted);
-  max-width: 720px;
-  margin-bottom: 40px;
+  max-width: 100%;
+  margin-bottom: 32px;
   line-height: 1.7;
 }
 
@@ -422,6 +422,10 @@ body {
   text-transform: uppercase;
   color: var(--purple);
   margin-bottom: 10px;
+}
+
+.criteria-eyebrow.supporting {
+  color: var(--text-dim);
 }
 
 .criteria-metric {
@@ -996,7 +1000,7 @@ body {
 .section-label-calc {
   background: #12101a;
   color: var(--purple);
-  border-left: 2px solid rgba(124, 92, 252, 0.3);
+  box-shadow: inset 2px 0 0 rgba(124, 92, 252, 0.3);
   position: sticky;
   right: 0;
   z-index: 6;
@@ -1071,8 +1075,7 @@ body {
 .perf-table thead tr:not(.table-section-row) th:nth-child(10),
 .perf-table tbody td:nth-child(10) {
   right: 335px;
-  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.5);
-  border-left: 2px solid rgba(124, 92, 252, 0.3);
+  box-shadow: inset 2px 0 0 rgba(124, 92, 252, 0.3), -4px 0 16px rgba(0, 0, 0, 0.5);
 }
 
 /* ---- Animations ---- */
